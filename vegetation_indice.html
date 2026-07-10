@@ -18,7 +18,7 @@
 		<style>
 			#map {
 				height: 600px;
-				margin: 20px 0;
+				margin: 20px 0 40px; /* increased bottom margin so controls sit clearly below the map */
 				border-radius: 8px;
 				/* ensure the map doesn't float above the controls */
 				z-index: 0;
@@ -27,14 +27,14 @@
 
 			.controls {
 				/* keep the controls as a normal block-level element below the map */
-				position: relative;
+				position: relative; /* not absolute/fixed so it participates in document flow */
 				clear: both;
 				background: white;
 				padding: 15px;
 				border-radius: 6px;
 				font-family: sans-serif;
 				box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-				margin: 20px auto;
+				margin: 40px auto; /* increased top margin to move controls further down */
 				max-width: 1200px;
 				z-index: 10;
 			}
@@ -68,8 +68,8 @@
 
 			/* Make sure on small screens the map and controls don't overlap */
 			@media (max-width: 768px) {
-				#map { height: 420px; }
-				.controls { padding: 12px; margin: 16px; }
+				#map { height: 420px; margin-bottom: 24px; }
+				.controls { padding: 12px; margin: 24px auto; }
 			}
 		</style>
 	</head>

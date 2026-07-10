@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Digital Elevation Model</title>
+		<title>Land Classification</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -69,12 +69,13 @@
 							<section class="post">
 								<header class="major">
 									<span class="date">June 18, 2026</span>
-									<h1>Digital Elevation Model</h1>
+									<h1>Land Classification</h1>
 									<p>Three maps depicting how the landscape of the river Tongelreep has changed over time.</p>
 								</header>
 								<div class="image main"><img src="images/elevation_model.png" alt="" /></div>
 								<h2>Overview</h2>
-								<p>A digital elevation model is a 3D graphic representation of elevation, used to depict the terrain of a certain area. For this assignment, we had to create two types of DEM: a digital surfasurface model (DSM), which represents every element on the surface (buildings, trees, etc) and a digital terrain model (DTM), which represents only the ground surface of a chosen area, without any possible roofs and canopies. The goal of the assignment was to use contemporary LIDAR data (from which DEMs are constructed) to make a comparison with a 19th century map of the area, which would let us trace how the landscape has changed over the years. We focused on the Netherlands for this assignment, due to it having one of the highest density LiDAR databases in the world. For this assignment, I chose to investigate the river Tongelreep and surrounding areas in Noord-Brabant has shifted over the years. The map I have chosen for this project is a map of the Noord-Brabant region made in 1841, according to the surveys of the cadastral register. It was produced under the direction of L. van der Voordt Pieck and M. Kuijl, and drawn by A.B. van Lieshout. The river Tongelreep is a small tributary of the river Dommel that flows through Belgium and the Netherlands. While it is mostly free-flowing, it has been altered by humans to an extent: the stretch to the west of Leenderbos was canaled in 1890 for the creation of fishing ponds, as well as to the south of that area, where it was canaled by monks from the St. Bernadus Abbey in Achel, Belgium. It is interesting to note that agricultural activities at the Achel Abbey stopped in 1989, and efforts have been made to restore the natural flow of the river since then.</p>
+								<p>For centuries, cartographers had to observe and manually record each feature of a landscape by going there in person and visiting every single body of water, farm field, factory and so on. Automated land cover classification seeks to make this process faster and more efficient by using satellite imagery and algorithms that allow large areas to be sorted into land-cover categories. As each surface captured by a satellite has its own unique multispectral data, or in simpler words, reflects different wavelengths, that data can be used to classify each surface by land-cover or use. The applications of this method are myriad: with it, we can study changes in landscape over time, the health of vegetation, deforestation, the effect of different agricultural methods, urban development and other changes in an environment. Supervised classification needs training samples of confirmed land-cover types, which the software uses as examples to classify the rest of the image by “inferring”. Unsupervised classification, on the other hand, has the software automatically group pixels or objects (polygons) based on similar spectral values that it detects. The only human input here is the user deciding the number of classes for the data to be divided into. Afterwards, it is up to the user to interpret and label each category and analyse whether it actually reflects reality. 
+</p>
 								<h2>Methods</h2>
 								<p>These maps were produced first by choosing a 19th century map from the OldMapsOnline database and narrowing in on the area which I wanted to explore further, namely the Tongelreep. Having picked out an area of interest, I then located the very same area in present day in QGIS using OpenStreetMap. Afterwards, I downloaded the corresponding DTM and DSM files, which presented a fascinating almost-“cross-cut” look into the area. Now that I had all necessary components of my model, I overlaid them as different layers to reveal the change the area had underwent in the past (roughly) 200 years. In total, I created three maps: a digital terrain model, a digital surface model and a digital terrain model overlaid with the 19th century map, allowing us to trace if and how the river has diverged and whether surrounding areas have also undergone significant changes. The total size of the area I inspected was roughly between 2 and 5 km.</p>
 								<h2>Results</h2>
